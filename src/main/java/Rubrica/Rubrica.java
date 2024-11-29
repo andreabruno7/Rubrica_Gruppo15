@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.rubrica_gruppo15;
+package Rubrica;
 
 /**
  *
  * @author bruno
  */
-public class mainClass {
+public class Rubrica {
     public static void main(String[] args){
         System.out.println("Ciao!");
+        int a = 8;
+        System.out.println(a*a);
     }
-}
+}   
