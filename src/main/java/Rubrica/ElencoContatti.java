@@ -87,4 +87,15 @@ public class ElencoContatti {
     public SortedList<Contatto> ricercaContatto(String str){
         
     }
+    
+    /**
+     * @brief Ritorna il numero di elementi presenti nell'elenco.
+     * 
+     * Il metodo ritorna il numero degli elementi presenti nell'elenco.
+     * 
+     * @return Ritorna un intero che rappresenta la dimensione dell'elenco.
+     */
+    public int numContatti(){
+        
+    }
 }

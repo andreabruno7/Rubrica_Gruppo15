@@ -15,9 +15,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import Rubrica.ElencoContatti;
+import javafx.scene.control.Label;
 
 
 public class RubricaController extends TabellaController {
+    @FXML
+    private Label numeroContatti;
     
     /**
      * @brief  Inizializza gli elementi grafici della finestra principale della rubrica.
