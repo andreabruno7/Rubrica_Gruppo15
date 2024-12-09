@@ -5,7 +5,7 @@
  * Il file mantiene la logica di gestione degli eventi associati alla rubrica
  * 
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import Rubrica.ElencoContatti;
+import gruppo15.rubrica.ElencoContatti;
 import javafx.scene.control.Label;
 
 

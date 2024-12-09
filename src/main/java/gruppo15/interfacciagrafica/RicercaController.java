@@ -4,8 +4,9 @@
  * 
  * Il file mantiene la logica di gestione degli eventi associati alla finestra di ricerca.
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
+import gruppo15.rubrica.ElencoContatti;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

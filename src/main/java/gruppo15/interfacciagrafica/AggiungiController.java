@@ -4,8 +4,10 @@
  * 
  * Il file mantiene la logica di gestione degli eventi associati alla finestra di aggiunta. 
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
+
+import gruppo15.rubrica.Contatto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

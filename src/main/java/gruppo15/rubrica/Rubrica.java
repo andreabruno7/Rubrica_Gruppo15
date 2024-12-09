@@ -5,7 +5,7 @@
  * Questo file è la classe principale che gestisce l'applicazione JavaFX dedicata alla rubrica.
  * 
  */
-package Rubrica;
+package gruppo15.rubrica;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

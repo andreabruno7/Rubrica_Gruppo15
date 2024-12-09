@@ -5,10 +5,10 @@
  * Il file mantiene la logica di gestione degli eventi associati alla tabella
  *
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
-import Rubrica.Contatto;
-import Rubrica.ElencoContatti;
+import gruppo15.rubrica.Contatto;
+import gruppo15.rubrica.ElencoContatti;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

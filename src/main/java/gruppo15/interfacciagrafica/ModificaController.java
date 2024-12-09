@@ -4,12 +4,12 @@
  * 
  * Il file mantiene la logica di gestione degli eventi associati alla finestra di modifica e mantiene il contatto da modificare.
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import Rubrica.Contatto;
+import gruppo15.rubrica.Contatto;
 
 public class ModificaController {
     @FXML
