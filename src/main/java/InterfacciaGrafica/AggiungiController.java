@@ -6,6 +6,8 @@
  */
 package InterfacciaGrafica;
 
+
+import Rubrica.Contatto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
