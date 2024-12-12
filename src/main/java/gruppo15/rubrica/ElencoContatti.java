@@ -2,22 +2,54 @@
  * @file ElencoContatti.java
  * @brief Questo file contiene l'impelementazione di un elenco di contatti.
  * 
- * Questo file implementa un elenco di contatti. L'elenco può essere ottenuto anche come ordinato
- * attraverso una lista osservabile SortableList.
+ * Questo file implementa un elenco di contatti. L'elenco viene ottenuto come ordinato
+ * attraverso una lista osservabile ObservableList.
  * 
  * 
  */
 package gruppo15.rubrica;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.SortedList;
 
 public class ElencoContatti {
     
-    private ObservableList<Contatto> elenco;
+    private final ArrayList<Contatto> elenco;
     
-    private SortedList<Contatto> elencoOrdinato;
+    private final ObservableList<Contatto> elencoOrdinato;
     
+    private class Comparatore implements Comparator<Contatto>{
+
+        @Override
+        public int compare(Contatto o1, Contatto o2) { //comparatore per l'ordine dell'elenco
+            int compare;
+            if(o1.getCognome() != null && o2.getCognome() != null) //comparatore con entrambi i cognomi presenti
+               compare = o1.getCognome().compareToIgnoreCase(o2.getCognome()); 
+            else{
+                if(o1.getCognome()!=null) //caso in cui il cognome di o1 è presente, quello di o2 no
+                    compare = 1;
+                else if(o2.getCognome() != null) //caso in cui il cognome di o2 è presente, quello di o1 no
+                        compare = -1;
+                    else
+                        compare = 0;
+                    
+            }if(compare==0){ //caso in cui né o1 che o2 hanno un cognome
+                if(o1.getNome() != null && o2.getNome() != null) //caso in cui sia o1 che o2 hanno il nome
+                    compare = o1.getNome().compareToIgnoreCase(o2.getNome());
+                else{
+                    if(o1.getNome() != null)//caso in cui il nome di o1 è presente, quello di o2 no
+                        compare = 1;
+                    else if (o2.getNome() != null)//caso in cui il nome di o2 è presente, quello di o1 no
+                        compare = -1; 
+                    else // caso in cui nessuno dei due ha né il nome né il cognome
+                        compare = 0;
+                }
+            }return compare;
+        }
+        
+    }
     /**
      * @brief Costruttore di default.
      * 
@@ -25,7 +57,8 @@ public class ElencoContatti {
      * 
      */
     public ElencoContatti(){
-        
+        elenco = new ArrayList<>();
+        elencoOrdinato = FXCollections.observableArrayList();
     }
     
     /**
@@ -40,7 +73,8 @@ public class ElencoContatti {
      * 
      */
     public void addContatto(Contatto c){
-        
+        elenco.add(c);
+        aggiornaElenco();
     }
     
     /**
@@ -55,37 +89,45 @@ public class ElencoContatti {
      * @return true se la rimozione è andata a buon fine, false se l'elemento non è stato trovato.
      */
     public boolean removeContatto(Contatto c){
-        
+        boolean result = elenco.remove(c);
+        aggiornaElenco();
+        return result;
     }
     
     /**
      * @brief Ritorna l'elenco ordinato.
      * 
-     * Il metodo ritorna una SortedList dell'elenco dei contatti.
+     * Il metodo ritorna una ObservableList dell'elenco dei contatti.
      * 
      * @post Per manipolare la lista di ritorno è sufficiente chiamare i metodi sull'oggetto ElencoContatti su cui è stato chiamato questo metodo.
      * @post Nonostante l'inserimento o la rimozione di altri elementi, la lista rimarrà sempre ordinata.
      * @post L'ordinamento di questa lista è per cognome. Se il cognome è uguale, si sceglie per il nome.
      * 
-     * @return Ritorna una SortedList contenente i contatti in modo ordinato.
+     * @return Ritorna una ObservableList contenente i contatti in modo ordinato.
      */
-    public SortedList<Contatto> getElencoOrdinato(){
-        
+    public ObservableList<Contatto> getElencoOrdinato(){
+        return elencoOrdinato;
     }
     
     /**
      * @brief Ritorna l'elenco ordinato contenete i risultati della ricerca.
      * 
      * Il metodo ricerca la stringa passata come parametro nei nomi e nei cognomi di tutti i contatti inseriti.
-     * Restituisce una SortedList contenete tutti i contatti in cui trova corrispondenza.
+     * Restituisce una ObservableList contenete tutti i contatti in cui trova corrispondenza.
      * 
-     * @post Se non vengono trovati contatti, la SortedList sarà null.
+     * @post Se non vengono trovati contatti, la ObservableList sarà null.
      * 
      * @param[in] str La stringa da cercare.
-     * @return Ritorna una SortedList contenente i contatti richiesti.
+     * @return Ritorna una ObservableList contenente i contatti richiesti.
      */
-    public SortedList<Contatto> ricercaContatto(String str){
-        
+    public ObservableList<Contatto> ricercaContatto(String str){
+        ArrayList<Contatto> risultati = new ArrayList<>();
+        for(Contatto c : elenco){
+            if(c.getNome().matches("(?i)^"+str+".*")||c.getCognome().matches("(?i)^"+str+".*")) //cerca la stringa passata come sottostringa iniziale in modo case insensitive in tutti i contatti
+                risultati.add(c);
+        }
+        ObservableList<Contatto> risultatiOsservabili = FXCollections.observableArrayList(risultati);
+        return risultatiOsservabili;
     }
     
     /**
@@ -96,6 +138,11 @@ public class ElencoContatti {
      * @return Ritorna un intero che rappresenta la dimensione dell'elenco.
      */
     public int numContatti(){
-        
+        return elenco.size();
+    }
+    
+    private void aggiornaElenco(){
+        elenco.sort(new Comparatore());
+        elencoOrdinato.setAll(elenco);
     }
 }
