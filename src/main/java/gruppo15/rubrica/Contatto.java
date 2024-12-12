@@ -5,7 +5,7 @@
  * Questo file contiene gli attributi e i metodi necessari alla gestione di un contatto.
  * 
  */
-package Rubrica;
+package gruppo15.rubrica;
 
 public class Contatto {
     private String nome;

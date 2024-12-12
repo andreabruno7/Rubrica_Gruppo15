@@ -7,7 +7,7 @@
  * 
  * 
  */
-package Rubrica;
+package gruppo15.rubrica;
 
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.SortedList;

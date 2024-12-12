@@ -5,7 +5,7 @@
  * Questo file contiene i metodi necessari al salvataggio e al caricamento di un elenco contatti su un file.
  * 
  */
-package Rubrica;
+package gruppo15.rubrica;
 
 
 public class IOFile {

@@ -5,12 +5,12 @@
  * Questo file contiene i metodi e gli attributi per la gestione della visualizzazione delle informazioni di un contatto
  * 
  */
-package InterfacciaGrafica;
+package gruppo15.interfacciagrafica;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import Rubrica.Contatto;
+import gruppo15.rubrica.Contatto;
 
 public class VisualizzaController {
     @FXML
