@@ -20,7 +20,10 @@ public class Contatto {
  * @post I campi del contatto vengono inizializzati come vuoti.
  */
     public Contatto () {
-        
+       nome = new String();
+       cognome = new String();
+       numeri = new String[3];
+       email  = new String[3];
     }
     
 /**
@@ -29,7 +32,7 @@ public class Contatto {
  * @return Restituisce una stringa contenente il nome del contatto.
  */
     public String getNome() {
-        
+        return nome;
     }
     
 /**
@@ -38,7 +41,7 @@ public class Contatto {
  * @param[in] nome Il nome da assegnare al contatto.
  */
     public void setNome(String nome) {
-        
+        this.nome = nome;
     }
     
 /**
@@ -47,7 +50,7 @@ public class Contatto {
  * @return Restituisce una stringa contenente il cognome del contatto.
  */
     public String getCognome() {
-        
+        return cognome;
     }
     
 /**
@@ -56,7 +59,7 @@ public class Contatto {
  * @param [in] cognome Il cognome da assegnare al contatto.
  */
     public void setCognome(String cognome) {
-        
+        this.cognome = cognome;
     }
  
 /**
@@ -68,7 +71,7 @@ public class Contatto {
  * @return Restituisce una stringa contenente uno dei numeri di telefono del contatto.
  */
     public String getNumeroAt(int index){
-        
+        return numeri[index]; 
     }
     
 /**
@@ -80,7 +83,7 @@ public class Contatto {
  * @return Restituisce una stringa contenente una delle e-mail del contatto.
  */
     public String getEmailAt(int index){
-        
+        return email[index]; 
     }
 
 /**
@@ -94,7 +97,14 @@ public class Contatto {
  * @param [in] numero Il numero di telefono da inizializzare.
  */    
     public void setNumeroAt(int index,String numero) throws Exception{
-        
+        if(numero == null){
+            this.numeri[index]=null;
+            return;
+        }
+        if(!validaNumero(numero)){
+            throw new Exception();
+                    }
+            this.numeri[index]=numero;
     }
 
 /**
@@ -108,14 +118,21 @@ public class Contatto {
  * @param [in] email L'e-mail da inizializzare.
  */      
     public void setEmailAt(int index,String email) throws Exception{
-        
+        if(email == null){
+            this.email[index]=null;
+            return;
+        }
+        if(!validaEmail(email)){
+            throw new Exception();
+                    }
+        this.email[index]=email;
     }
     
     private boolean validaNumero(String numero) throws Exception{
-        
+        return numero.matches("\\d{" + numero.length() + "}") || numero == null;
     }
     
     private boolean validaEmail(String email) throws Exception{
-        
+        return email.matches("[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}") || email == null;
     }
 }

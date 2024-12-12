@@ -37,4 +37,5 @@
                 <goal>javafx:jlink</goal>
             </goals>
         </action>
-    </actions>
+</actions>
+
