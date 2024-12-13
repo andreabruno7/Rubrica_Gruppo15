@@ -11,6 +11,8 @@ package gruppo15.rubrica;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -128,6 +130,26 @@ public class ElencoContatti {
         }
         ObservableList<Contatto> risultatiOsservabili = FXCollections.observableArrayList(risultati);
         return risultatiOsservabili;
+    }
+    
+    public void modificaContatto(Contatto vecchio,Contatto nuovo){
+        vecchio.setNome(nuovo.getNome());
+        vecchio.setCognome(nuovo.getCognome());
+        for(int i = 0;i<3;i++){
+            try {
+                vecchio.setNumeroAt(i,nuovo.getNumeroAt(i));
+            } catch (Exception ex) {
+                Logger.getLogger(ElencoContatti.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        for(int i = 0;i<3;i++){
+            try {
+                vecchio.setEmailAt(i,nuovo.getEmailAt(i));
+            } catch (Exception ex) {
+                Logger.getLogger(ElencoContatti.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        aggiornaElenco();
     }
     
     /**

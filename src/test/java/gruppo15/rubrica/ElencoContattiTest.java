@@ -96,6 +96,28 @@ public class ElencoContattiTest {
         assertEquals(2,cercato.size());
     }
 
+    
+    @Test
+    public void testModificaContatto(){
+        ElencoContatti contatti = new ElencoContatti();
+        Contatto contatto1 = new Contatto();
+        contatto1.setNome("Claudia");
+        Contatto contatto2 = new Contatto();
+        contatto2.setNome("Finamore");
+        Contatto contatto3 = new Contatto();
+        contatto3.setNome("Andrea");
+        contatti.addContatto(contatto1);
+        contatti.addContatto(contatto3);
+        contatti.addContatto(contatto2);
+        Contatto contatto3new = new Contatto();
+        contatto3new.setNome("Salvatore");
+        contatti.modificaContatto(contatto3,contatto3new);
+        ObservableList<Contatto> result = contatti.getElencoOrdinato();
+        assertEquals(contatto1,result.get(0)); //controlla se gli elementi restano in ordine dopo aver modificato un elemento
+        assertEquals(contatto2,result.get(1)); 
+        assertEquals(contatto3,result.get(2));
+    }
+    
     /**
      * Test of numContatti method, of class ElencoContatti.
      */
