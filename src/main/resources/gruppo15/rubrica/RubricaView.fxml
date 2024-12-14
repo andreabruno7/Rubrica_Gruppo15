@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="462.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tabella" layoutX="21.0" layoutY="109.0" onMouseClicked="#handleContattoSelezionato" prefHeight="572.0" prefWidth="422.0">
+              <columns>
+                <TableColumn fx:id="nomeCln" prefWidth="211.0" text="Nome" />
+                <TableColumn fx:id="cognomeCln" minWidth="0.0" prefWidth="210.0" text="Cognome" />
+              </columns>
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect>
+            </TableView>
+            <MenuBar layoutX="21.0" layoutY="67.0" prefHeight="32.0" prefWidth="129.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="caricaid" mnemonicParsing="false" onAction="#handleCarica" text="Carica" />
+                        <MenuItem fx:id="salvaid" mnemonicParsing="false" onAction="#handleSalva" text="Salva" />
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect>
+            </MenuBar>
+            <Button fx:id="ricercaid" layoutX="314.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleRicerca" prefHeight="32.0" prefWidth="129.0" text="Ricerca">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <Button fx:id="aggiungiid" layoutX="168.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleAggiungi" prefHeight="32.0" prefWidth="129.0" text="Aggiungi">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+            <Label layoutX="210.0" layoutY="698.0" prefHeight="21.0" prefWidth="65.0" text="contatti" />
+            <Label fx:id="numeroContatti" layoutX="192.0" layoutY="698.0" text="0" />
+            <Label layoutX="21.0" layoutY="14.0" text="Contatti">
+               <font>
+                  <Font name="Wingdings" size="32.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="379.0" layoutY="9.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#00000026" offsetX="5.0" offsetY="5.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</HBox>
