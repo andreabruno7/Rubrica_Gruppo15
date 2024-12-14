@@ -7,9 +7,13 @@
  */
 package gruppo15.rubrica;
 
+import gruppo15.interfacciagrafica.RubricaController;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -17,6 +21,7 @@ import javafx.stage.Stage;
 
 
 public class Rubrica extends Application {
+    private ElencoContatti contatti;
     
 /**
  * @brief  Caricamento della rubrica.
@@ -26,7 +31,21 @@ public class Rubrica extends Application {
  * @param[in] primaryStage Oggetto principale che viene creato e mostrato all'avvio dell'applicazione.
  */    
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        contatti = new ElencoContatti();
+            Parent root;
+            FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("RubricaView.fxml"));
+            RubricaController controller = new RubricaController();
+            loader.setController(controller);
+            root = loader.load();
+            controller.inizializzaRubrica(contatti);
+
+            Scene scene = new Scene(root, 462, 733);
+            
+            primaryStage.setTitle("Rubrica");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
         
     }
 

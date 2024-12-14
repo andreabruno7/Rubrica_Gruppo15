@@ -31,8 +31,10 @@ public class RubricaController extends TabellaController {
      * @pre Il controller deve essere associato al file fxml opportuno.
      * @post La tabella viene creata vuota.
      * 
+     * @param[in] elenco L'elenco i cui contatti verranno aggiunti alla tabella.
+     * 
      */
-    public void inizializzaRubrica() {
+    public void inizializzaRubrica(ElencoContatti elenco) {
         
     }
     
