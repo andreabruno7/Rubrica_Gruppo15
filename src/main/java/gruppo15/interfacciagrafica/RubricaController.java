@@ -7,15 +7,18 @@
  */
 package gruppo15.interfacciagrafica;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import gruppo15.rubrica.ElencoContatti;
+import gruppo15.rubrica.IOFile;
+import javafx.beans.binding.Bindings;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import gruppo15.rubrica.Rubrica;
+import java.io.File;
+import java.io.IOException;
+import javafx.stage.FileChooser;
 
 
 public class RubricaController extends TabellaController {
@@ -35,28 +38,64 @@ public class RubricaController extends TabellaController {
      * 
      */
     public void inizializzaRubrica(ElencoContatti elenco) {
-        
+        inizializzaTabella(elenco);
+        numeroContatti.textProperty().bind(Bindings.size(elenco.getElencoOrdinato()).asString());
     }
     
     @FXML
-    private void handleAggiungi(ActionEvent event) {
-        
+    private void handleAggiungi(ActionEvent event) throws IOException {
+        Parent root;
+        FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("ModificaView.fxml"));
+        AggiungiController controller = new AggiungiController();
+        loader.setController(controller);
+        root = loader.load();
+        controller.inizializzaAggiungi();
+        mostraFinestra("Aggiungi contatto",root,619,369);
+        if(controller.isAggiunto()){
+            elenco.addContatto(controller.getContatto());
+        }
+        aggiornaTabella();
     }
     
     @FXML
-    private void handleSalva(ActionEvent event){
-        
+    private void handleSalva(ActionEvent event) throws IOException{
+        File file = scegliFile();
+        if(file!=null){
+            IOFile.salva(elenco,file.getCanonicalPath());
+        }
     }
     
     @FXML
-    private void handleCarica(ActionEvent event){
-        
+    private void handleCarica(ActionEvent event) throws Exception{
+        File file = scegliFile();
+        if(file!=null){
+            ElencoContatti lista = IOFile.carica(file.getCanonicalPath());
+            inizializzaRubrica(lista);
+            aggiornaTabella();
+        }
     }
     
     
     @FXML
-    private void handleRicerca(ActionEvent event){
-        
+    private void handleRicerca(ActionEvent event) throws IOException{
+        Parent root;
+        FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("RicercaView.fxml"));
+        RicercaController controller = new RicercaController();
+        loader.setController(controller);
+        root = loader.load();
+        controller.inizializzaRicerca(elenco);
+        mostraFinestra("Ricerca",root,462,698);
+        this.elenco=controller.getElenco();
+        aggiornaTabella();
     }
     
+    private File scegliFile(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Scegli il file");
+        fileChooser.getExtensionFilters().addAll(
+            new FileChooser.ExtensionFilter("File csv","*.txt"),
+            new FileChooser.ExtensionFilter("Tutti i file","*.*"));
+        File selectedFile = fileChooser.showOpenDialog(tabella.getScene().getWindow());
+        return selectedFile;
+    }
 }
