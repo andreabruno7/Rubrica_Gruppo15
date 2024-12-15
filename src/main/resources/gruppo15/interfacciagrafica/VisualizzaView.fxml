@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="396.0" prefWidth="619.0">
+         <children>
+            <Label layoutX="52.0" layoutY="48.0" prefHeight="31.0" prefWidth="70.0" style="-fx-font-weight: bold;" text="Nome : ">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Label>
+            <Label layoutX="320.0" layoutY="48.0" prefHeight="31.0" prefWidth="105.0" style="-fx-font-weight: bold;" text="Cognome : ">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Label>
+            <Label layoutX="52.0" layoutY="119.0" prefHeight="31.0" prefWidth="105.0" style="-fx-font-weight: bold;" text="Numero : ">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Label>
+            <Label layoutX="318.0" layoutY="119.0" prefHeight="31.0" prefWidth="80.0" style="-fx-font-weight: bold;" text="Email : ">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Label>
+            <Label fx:id="nomeLbl" layoutX="144.0" layoutY="48.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="cognomeLbl" layoutX="436.0" layoutY="48.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="primoNumeroLbl" layoutX="144.0" layoutY="119.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="secondoNumeroLbl" layoutX="144.0" layoutY="167.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="terzoNumeroLbl" layoutX="144.0" layoutY="214.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="primaMailLbl" layoutX="436.0" layoutY="119.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="secondaMailLbl" layoutX="436.0" layoutY="167.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Label fx:id="terzaMailLbl" layoutX="436.0" layoutY="214.0" prefHeight="31.0" prefWidth="146.0" text="non inserito" />
+            <Button fx:id="esci" layoutX="52.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleEsci" text="Esci">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+            <Button fx:id="elimina" layoutX="467.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleElimina" text="Elimina">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+            <Button fx:id="modifica" layoutX="358.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleModifica" text="Modifica">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
