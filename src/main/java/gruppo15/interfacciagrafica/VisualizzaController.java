@@ -85,6 +85,10 @@ public class VisualizzaController {
     public boolean isEliminato(){
         
     }
+
+    public Contatto getContatto() {
+        return contatto;
+    }
     
     
 }

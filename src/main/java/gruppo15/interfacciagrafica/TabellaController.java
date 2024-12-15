@@ -9,9 +9,16 @@ package gruppo15.interfacciagrafica;
 
 import gruppo15.rubrica.Contatto;
 import gruppo15.rubrica.ElencoContatti;
+import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 
 public class TabellaController {
@@ -25,7 +32,10 @@ public class TabellaController {
     protected ElencoContatti elenco;
     
     protected void inizializzaTabella(ElencoContatti lista){
-        
+        this.elenco=lista;
+        tabella.setItems(elenco.getElencoOrdinato());
+        nomeCln.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        cognomeCln.setCellValueFactory(new PropertyValueFactory<>("cognome"));
     }
     
     /**
@@ -38,29 +48,54 @@ public class TabellaController {
      * @return  Viene restituito l'elenco dei contatti presenti all'interno della tabella
      */
     public ElencoContatti getElenco() {
-        
+        return this.elenco;
     }
     
-    protected void setElenco(ElencoContatti lista){
-        
-    }
     
     @FXML
-    protected void handleContattoSelezionato(){
-        
+    protected void handleContattoSelezionato() throws IOException{
+        Contatto contatto = tabella.getSelectionModel().getSelectedItem();
+        if(contatto!=null){
+            mostraDettagli(contatto);
+            aggiornaTabella();
+        }
     }
         
     
     
-    protected void mostraDettagli(Contatto contatto){
+    protected void mostraDettagli(Contatto contatto) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("VisualizzaView.fxml"));
+        VisualizzaController controller = new VisualizzaController();
+        loader.setController(controller);
+        Parent root = loader.load();
+        controller.inizializzaVisualizza(contatto);
+        mostraFinestra("Dettagli contatto",root,619,396);
+        if(controller.isEliminato()){
+            gestisciEliminazioneContatto(contatto);
+            aggiornaTabella();
+        }
+        if(controller.isModificato()){
+            elenco.modificaContatto(contatto,controller.getContatto());
+            aggiornaTabella();
+        }
         
+    }
+    protected void mostraFinestra(String titolo,Parent root, double larg, double ht){
+        Stage stage = new Stage();
+        stage.setTitle(titolo);
+        stage.setScene(new Scene(root,larg,ht));
+        stage.setResizable(false);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
     }
         
     
     
     protected void aggiornaTabella(){
-        
+        tabella.refresh();
     }
         
-    
+        protected void gestisciEliminazioneContatto(Contatto contatto){
+        elenco.removeContatto(contatto);
+    }
 }
