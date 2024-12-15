@@ -45,7 +45,7 @@ public class RubricaController extends TabellaController {
     @FXML
     private void handleAggiungi(ActionEvent event) throws IOException {
         Parent root;
-        FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("ModificaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ModificaView.fxml"));
         AggiungiController controller = new AggiungiController();
         loader.setController(controller);
         root = loader.load();
@@ -79,7 +79,7 @@ public class RubricaController extends TabellaController {
     @FXML
     private void handleRicerca(ActionEvent event) throws IOException{
         Parent root;
-        FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("RicercaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("RicercaView.fxml"));
         RicercaController controller = new RicercaController();
         loader.setController(controller);
         root = loader.load();
@@ -93,7 +93,7 @@ public class RubricaController extends TabellaController {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Scegli il file");
         fileChooser.getExtensionFilters().addAll(
-            new FileChooser.ExtensionFilter("File csv","*.txt"),
+            new FileChooser.ExtensionFilter("File csv","*.csv"),
             new FileChooser.ExtensionFilter("Tutti i file","*.*"));
         File selectedFile = fileChooser.showOpenDialog(tabella.getScene().getWindow());
         return selectedFile;
