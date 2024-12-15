@@ -1,0 +1,14 @@
+Modifiche dei documenti
+
+Modifiche relative al documento dei Requisiti
+1-Requisito 2.8. Aggiunta specifica riguardante l'ordinamento della visualizzazione della rubrica. Specificato il caso in cui il campo cognome è vuoto.
+2-Tabella IPO, 2.10. Specificato come la ricerca funzioni solo per Sottostringa iniziale.
+3-Caso d'uso "Creazione Contatto". Cambiata la voce "Crea Contatto" da cliccare per creare il contatto in "Aggiungi" per coerenza col codice.
+4-Caso d'uso "Elimina Contatto". Cambiato riferimento del flusso di eventi->Il tasto per eliminare è "Elimina" e non un'icona.
+5-Caso d'uso "Ricerca Contatto". Specificato come nella modifica 2, che i risultati vengono mostrati per sottostringa iniziale.
+6-Diagramma dei casi d'uso in UML. Aggiunto un extend tra "Visualizza info contatto" e "Ricerca Contatto" data la possibilità che l'utente ha di visualizzare direttamente le info di un contatto dalla finestra della ricerca.
+
+Modifiche relative al documento del Design
+1-Diagramma dei package. Modificati i nomi dei package ed eliminati i file FXML dal package "gruppo15.interfacciagrafica" sia dal diagramma che dalla descrizione nel documento.
+2-Diagramma delle classi. Ultimato il diagramma delle classi per maggiore leggibilità e coerenza.
+3-Diagramma delle sequenze. Apportate piccole modifiche ad alcuni nomi di metodi presenti nei diagrammi delle sequenze per coerenza con il codice.
