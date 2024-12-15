@@ -56,7 +56,7 @@ public class Rubrica extends Application {
  * @param[in] args Argomenti da linea di comando.
  */ 
     public static void main(String[] args) {
-        
+        launch(args);
     }
     
 }
