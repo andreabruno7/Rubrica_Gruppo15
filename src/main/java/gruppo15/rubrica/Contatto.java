@@ -118,7 +118,7 @@ public class Contatto {
  * @param [in] email L'e-mail da inizializzare.
  */      
     public void setEmailAt(int index,String email) throws Exception{
-        if(email == null){
+        if(email == null || email.isEmpty()){
             this.email[index]=null;
             return;
         }
@@ -133,6 +133,6 @@ public class Contatto {
     }
     
     private boolean validaEmail(String email) throws Exception{
-        return email.matches("[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}") || email == null;
+        return email.matches("[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}") || email == null || email.isEmpty();
     }
 }
