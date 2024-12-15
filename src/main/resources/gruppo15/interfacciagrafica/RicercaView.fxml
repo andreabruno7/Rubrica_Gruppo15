@@ -21,7 +21,7 @@
                   <DropShadow color="#00000026" offsetY="5.0" />
                </effect>
             </TableView>
-            <TextField fx:id="ricerca" layoutX="68.0" layoutY="23.0" prefHeight="31.0" prefWidth="236.0" promptText=" cerca">
+            <TextField fx:id="ricerca" layoutX="21.0" layoutY="23.0" prefHeight="31.0" prefWidth="283.0" promptText=" cerca">
                <effect>
                   <DropShadow color="#00000026" offsetY="5.0" />
                </effect></TextField>
@@ -33,11 +33,6 @@
                <effect>
                   <DropShadow color="#00000026" offsetY="5.0" />
                </effect></Button>
-            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="27.0" layoutY="23.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

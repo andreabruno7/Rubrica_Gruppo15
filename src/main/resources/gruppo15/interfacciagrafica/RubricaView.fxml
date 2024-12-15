@@ -48,8 +48,8 @@
                <effect>
                   <DropShadow color="#00000026" offsetY="5.0" />
                </effect></Button>
-            <Label layoutX="210.0" layoutY="698.0" prefHeight="21.0" prefWidth="65.0" text="contatti" />
-            <Label fx:id="numeroContatti" layoutX="192.0" layoutY="698.0" text="0" />
+            <Label layoutX="210.0" layoutY="698.0" prefHeight="21.0" prefWidth="65.0" style="-fx-font-weight: bold;" text="contatti" />
+            <Label fx:id="numeroContatti" layoutX="192.0" layoutY="698.0" style="-fx-font-weight: bold;" text="0" />
             <Label layoutX="21.0" layoutY="14.0" text="Contatti">
                <font>
                   <Font name="Wingdings" size="32.0" />
@@ -58,11 +58,6 @@
                   <DropShadow color="#00000026" offsetY="5.0" />
                </effect>
             </Label>
-            <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="379.0" layoutY="9.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/user.png" />
-               </image>
-            </ImageView>
          </children>
          <effect>
             <DropShadow color="#00000026" offsetX="5.0" offsetY="5.0" />
