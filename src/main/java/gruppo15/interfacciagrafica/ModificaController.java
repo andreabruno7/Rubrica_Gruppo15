@@ -103,6 +103,7 @@ public class ModificaController {
         }
     }
     
+    //viene mostrato l'errore quando il numero o l'email non sono corretti
     protected void mostraErrore(String titolo,String msg){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(titolo);
@@ -140,6 +141,7 @@ public class ModificaController {
         stage.close();
     }
     
+    //il pulsante di conferma viene disabilitato quando sia il campo nome che il campo cognome sono vuoti 
     protected void initBindings(){
         BooleanBinding binding = nomeField.textProperty().isEmpty().and(cognomeField.textProperty().isEmpty());
         conferma.disableProperty().bind(binding);
