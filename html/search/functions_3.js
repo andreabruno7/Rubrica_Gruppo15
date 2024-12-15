@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['getcognome_0',['getCognome',['../class_rubrica_1_1_contatto.html#aef3e077dfbafa4b6af503d800ecdc2e0',1,'Rubrica::Contatto']]],
-  ['getcontatto_1',['getContatto',['../class_interfaccia_grafica_1_1_aggiungi_controller.html#a991b656cc967f86caa04580cfbe0a662',1,'InterfacciaGrafica.AggiungiController.getContatto()'],['../class_interfaccia_grafica_1_1_modifica_controller.html#a613b5fc7958ef90405202ae9253a7011',1,'InterfacciaGrafica.ModificaController.getContatto()']]],
-  ['getelenco_2',['getElenco',['../class_interfaccia_grafica_1_1_tabella_controller.html#a453f420b851e23489c4083bf514dfba3',1,'InterfacciaGrafica::TabellaController']]],
-  ['getelencoordinato_3',['getElencoOrdinato',['../class_rubrica_1_1_elenco_contatti.html#a9b60f969e409b80fa8f984e7d8c66f6a',1,'Rubrica::ElencoContatti']]],
-  ['getemailat_4',['getEmailAt',['../class_rubrica_1_1_contatto.html#a51076d2abed1162fc0bfee14c571a1e0',1,'Rubrica::Contatto']]],
-  ['getnome_5',['getNome',['../class_rubrica_1_1_contatto.html#a31091fe001c6dc1c97782e8f8fe80a1e',1,'Rubrica::Contatto']]],
-  ['getnumeroat_6',['getNumeroAt',['../class_rubrica_1_1_contatto.html#af3f27271befe929a1e1224551ba257d5',1,'Rubrica::Contatto']]]
+  ['getcognome_0',['getCognome',['../classgruppo15_1_1rubrica_1_1_contatto.html#ae83b5dae7eb78d310f52f13233828718',1,'gruppo15::rubrica::Contatto']]],
+  ['getcontatto_1',['getContatto',['../classgruppo15_1_1interfacciagrafica_1_1_aggiungi_controller.html#a1ee58e5f90226387e37a5c65ed6ccd84',1,'gruppo15.interfacciagrafica.AggiungiController.getContatto()'],['../classgruppo15_1_1interfacciagrafica_1_1_modifica_controller.html#a5af739e3917d237429c72b96a2db80ff',1,'gruppo15.interfacciagrafica.ModificaController.getContatto()'],['../classgruppo15_1_1interfacciagrafica_1_1_visualizza_controller.html#abadcf01979fdd0f367e466ca4c756453',1,'gruppo15.interfacciagrafica.VisualizzaController.getContatto()']]],
+  ['getelenco_2',['getElenco',['../classgruppo15_1_1interfacciagrafica_1_1_tabella_controller.html#a79292567a957f810d663d953ac70e738',1,'gruppo15::interfacciagrafica::TabellaController']]],
+  ['getelencoordinato_3',['getElencoOrdinato',['../classgruppo15_1_1rubrica_1_1_elenco_contatti.html#a1121bd6961227c3cd045574eb4ff4061',1,'gruppo15::rubrica::ElencoContatti']]],
+  ['getemailat_4',['getEmailAt',['../classgruppo15_1_1rubrica_1_1_contatto.html#adc7599d37a5b496aa898fd2dbd2875ca',1,'gruppo15::rubrica::Contatto']]],
+  ['getnome_5',['getNome',['../classgruppo15_1_1rubrica_1_1_contatto.html#a4e56b561f12aa991e4e43263e0463666',1,'gruppo15::rubrica::Contatto']]],
+  ['getnumeroat_6',['getNumeroAt',['../classgruppo15_1_1rubrica_1_1_contatto.html#afd0831583ccb4a3fcc3d86fe75693710',1,'gruppo15::rubrica::Contatto']]]
 ];

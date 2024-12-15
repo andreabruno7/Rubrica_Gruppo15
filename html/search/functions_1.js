@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['carica_0',['carica',['../class_rubrica_1_1_i_o_file.html#a33c21dfb57189f6ad3d864a2047896dd',1,'Rubrica::IOFile']]],
-  ['contatto_1',['Contatto',['../class_rubrica_1_1_contatto.html#abfde0f2f7c6c1eb7868c4d47e5387e10',1,'Rubrica::Contatto']]]
+  ['carica_0',['carica',['../classgruppo15_1_1rubrica_1_1_i_o_file.html#a01ad5a63dc0778288792432ab9427f87',1,'gruppo15::rubrica::IOFile']]],
+  ['contatto_1',['Contatto',['../classgruppo15_1_1rubrica_1_1_contatto.html#a0aaa4839e67f9feb0f6da0b914b428c9',1,'gruppo15::rubrica::Contatto']]]
 ];

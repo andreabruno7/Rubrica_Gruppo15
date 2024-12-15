@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['aggiungicontroller_0',['AggiungiController',['../class_interfaccia_grafica_1_1_aggiungi_controller.html',1,'InterfacciaGrafica']]]
+  ['aggiungicontroller_0',['AggiungiController',['../classgruppo15_1_1interfacciagrafica_1_1_aggiungi_controller.html',1,'gruppo15::interfacciagrafica']]]
 ];

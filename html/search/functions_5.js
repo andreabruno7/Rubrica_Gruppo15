@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../class_rubrica_1_1_rubrica.html#a8273e806414b8e7ac9f3ec980a736301',1,'Rubrica::Rubrica']]]
+  ['main_0',['main',['../classgruppo15_1_1rubrica_1_1_rubrica.html#a821d7d05d0a9d660fa0fee2ed111def4',1,'gruppo15::rubrica::Rubrica']]]
 ];

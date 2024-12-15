@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ricercacontroller_0',['RicercaController',['../class_interfaccia_grafica_1_1_ricerca_controller.html',1,'InterfacciaGrafica']]],
-  ['rubrica_1',['Rubrica',['../class_rubrica_1_1_rubrica.html',1,'Rubrica']]],
-  ['rubricacontroller_2',['RubricaController',['../class_interfaccia_grafica_1_1_rubrica_controller.html',1,'InterfacciaGrafica']]]
+  ['ricercacontroller_0',['RicercaController',['../classgruppo15_1_1interfacciagrafica_1_1_ricerca_controller.html',1,'gruppo15::interfacciagrafica']]],
+  ['rubrica_1',['Rubrica',['../classgruppo15_1_1rubrica_1_1_rubrica.html',1,'gruppo15::rubrica']]],
+  ['rubricacontroller_2',['RubricaController',['../classgruppo15_1_1interfacciagrafica_1_1_rubrica_controller.html',1,'gruppo15::interfacciagrafica']]]
 ];

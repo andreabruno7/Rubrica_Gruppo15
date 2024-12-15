@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visualizzacontroller_0',['VisualizzaController',['../class_interfaccia_grafica_1_1_visualizza_controller.html',1,'InterfacciaGrafica']]]
+  ['visualizzacontroller_0',['VisualizzaController',['../classgruppo15_1_1interfacciagrafica_1_1_visualizza_controller.html',1,'gruppo15::interfacciagrafica']]]
 ];

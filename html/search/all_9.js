@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tabellacontroller_0',['TabellaController',['../class_interfaccia_grafica_1_1_tabella_controller.html',1,'InterfacciaGrafica']]],
-  ['tabellacontroller_2ejava_1',['TabellaController.java',['../_tabella_controller_8java.html',1,'']]]
+  ['visualizzacontroller_0',['VisualizzaController',['../classgruppo15_1_1interfacciagrafica_1_1_visualizza_controller.html',1,'gruppo15::interfacciagrafica']]],
+  ['visualizzacontroller_2ejava_1',['VisualizzaController.java',['../_visualizza_controller_8java.html',1,'']]]
 ];

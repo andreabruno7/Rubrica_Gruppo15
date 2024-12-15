@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['removecontatto_0',['removeContatto',['../class_rubrica_1_1_elenco_contatti.html#a5a7facc683ac5425f71d3358f0113723',1,'Rubrica::ElencoContatti']]],
-  ['ricercacontatto_1',['ricercaContatto',['../class_rubrica_1_1_elenco_contatti.html#aea5e6733d45744ba1bfa334f9754a909',1,'Rubrica::ElencoContatti']]],
-  ['ricercacontroller_2',['RicercaController',['../class_interfaccia_grafica_1_1_ricerca_controller.html',1,'InterfacciaGrafica']]],
-  ['ricercacontroller_2ejava_3',['RicercaController.java',['../_ricerca_controller_8java.html',1,'']]],
-  ['rubrica_4',['Rubrica',['../class_rubrica_1_1_rubrica.html',1,'Rubrica']]],
-  ['rubrica_2ejava_5',['Rubrica.java',['../_rubrica_8java.html',1,'']]],
-  ['rubricacontroller_6',['RubricaController',['../class_interfaccia_grafica_1_1_rubrica_controller.html',1,'InterfacciaGrafica']]],
-  ['rubricacontroller_2ejava_7',['RubricaController.java',['../_rubrica_controller_8java.html',1,'']]]
+  ['salva_0',['salva',['../classgruppo15_1_1rubrica_1_1_i_o_file.html#a54df25dd85bf3cfedfb06f2154f17e6c',1,'gruppo15::rubrica::IOFile']]],
+  ['setcognome_1',['setCognome',['../classgruppo15_1_1rubrica_1_1_contatto.html#a230a83168f78c41dffc475ac2b8c70db',1,'gruppo15::rubrica::Contatto']]],
+  ['setemailat_2',['setEmailAt',['../classgruppo15_1_1rubrica_1_1_contatto.html#a24671c655abe4a87b8626a2378f20583',1,'gruppo15::rubrica::Contatto']]],
+  ['setnome_3',['setNome',['../classgruppo15_1_1rubrica_1_1_contatto.html#a03c9f456a11afe4b5958af691f4d0c59',1,'gruppo15::rubrica::Contatto']]],
+  ['setnumeroat_4',['setNumeroAt',['../classgruppo15_1_1rubrica_1_1_contatto.html#a0c7f4f34b13b50bdb934f26da5dd56e7',1,'gruppo15::rubrica::Contatto']]],
+  ['start_5',['start',['../classgruppo15_1_1rubrica_1_1_rubrica.html#acca1621af7b34253474faaa74b6a9d81',1,'gruppo15::rubrica::Rubrica']]]
 ];
