@@ -10,12 +10,20 @@ package gruppo15.interfacciagrafica;
 import gruppo15.rubrica.Contatto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.stage.Stage;
 
 
 public class AggiungiController extends ModificaController{
     private boolean aggiunto = false;
     
+    /**
+     * @brief  Inizializza gli elementi grafici della finestra per aggiungere i contatti.
+     * 
+     * Vengono inizializati i TextField come vuoti. Non è possibile aggiungere un contatto
+     * che non abbia almeno il nome o il cognome.
+     * 
+     * @pre Il controller deve essere associato al file fxml opportuno.
+     * 
+     */
     public void inizializzaAggiungi(){
         initBindings();
     }
@@ -37,7 +45,7 @@ public class AggiungiController extends ModificaController{
      * Il metodo ritorna true se il contatto mantenuto dal controller deve essere aggiunto alla rubrica, 
      * altrimenti ritorna false.
      * 
-     * @return Viene restituito true se il contatto mantenuto dal controller è stato aggiunto , altrimenti ritorna false.
+     * @return Viene restituito true se il contatto mantenuto dal controller deve essere aggiunto , altrimenti ritorna false.
      */
     public boolean isAggiunto() {
         return aggiunto;

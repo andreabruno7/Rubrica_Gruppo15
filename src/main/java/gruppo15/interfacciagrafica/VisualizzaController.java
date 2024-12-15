@@ -39,8 +39,8 @@ public class VisualizzaController {
     private Label terzaMailLbl;
     
     private Contatto contatto;
-    private boolean modificato;
-    private boolean eliminato;
+    private boolean modificato = false;
+    private boolean eliminato = false;
     
     @FXML
     private void handleEsci(ActionEvent event) {
@@ -184,7 +184,19 @@ public class VisualizzaController {
     public boolean isEliminato(){
         return eliminato;
     }
-
+    
+    
+    /**
+     * @brief  Restituisce il contatto.
+     * 
+     * Restituisce il contatto mantenuto dal controller.
+     * 
+     * @post il contatto potrebbe dover essere modificato o eliminato, per altre informazioni vedi isModificato() e isEliminato().
+     * @see isModificato()
+     * @see isEliminato()
+     * 
+     * @return Viene restituito il contatto.
+     */ 
     public Contatto getContatto() {
         return contatto;
     }

@@ -45,6 +45,7 @@ public class ModificaController {
      * 
      * Viene inizializzato il contatto da modificare e vengono mostrate le sue informazioni
      * nei TextField. Il contatto che viene passato non è stato ancora modificato.
+     * Non è possibile eliminare entrambi i campi di nome e cognome del contatto.
      * 
      * @pre Il controller deve essere associato al file fxml opportuno.
      * @post Vengono visualizzate nella finestra tutte le informazioni del contatto.

@@ -19,18 +19,18 @@ import java.util.Scanner;
 
 public class IOFile {
 
-/**
- * @brief Operazione di output.
- * 
- * L'elenco contatti passato viene salvato su un file esterno.
- * 
- * @pre Il file deve avere come estensione .csv
- * @invariant L'elenco contatti non viene modificato.
- * @post Se l'elenco è vuoto il file sarà vuoto.
- * 
- * @param [in] c l'elenco contatti che deve essere salvato.
- * @param [in] filename il nome del file su cui salvare l'elenco.
- */
+    /**
+     * @brief Operazione di output.
+     * 
+     * L'elenco contatti passato viene salvato su un file esterno.
+     * 
+     * @pre Il file deve avere come estensione .csv
+     * @invariant L'elenco contatti non viene modificato.
+     * @post Se l'elenco è vuoto il file sarà vuoto.
+     * 
+     * @param [in] c l'elenco contatti che deve essere salvato.
+     * @param [in] filename il nome del file su cui salvare l'elenco.
+     */
     public static void salva(ElencoContatti c, String filename) throws IOException{
         try( PrintWriter pw = new PrintWriter(new BufferedWriter ( new FileWriter(filename)))){
             pw.println("NOME;COGNOME;PRIMO NUMERO;SECONDO NUMERO;TERZO NUMERO; PRIMA EMAIL; SECONDA EMAIL; TERZA EMAIL");
@@ -66,17 +66,17 @@ public class IOFile {
         } 
     }
 
-/**
- * @brief Operazione di input.  
- * 
- * Viene caricato l'elenco contatti da un file esterno.
- * 
- * @pre Il file deve avere come estensione .csv
- * @invariant L'elenco contatti non viene modificato.
- * @post Se il file è vuoto l'elenco risultante sarà vuoto.
- * 
- * @param [in] filename Il nome del file da cui caricare l'elenco dei contatti.
- */    
+    /**
+     * @brief Operazione di input.  
+     * 
+     * Viene caricato l'elenco contatti da un file esterno.
+     * 
+     * @pre Il file deve avere come estensione .csv
+     * @invariant L'elenco contatti non viene modificato.
+     * @post Se il file è vuoto l'elenco risultante sarà vuoto.
+     * 
+     * @param [in] filename Il nome del file da cui caricare l'elenco dei contatti.
+     */    
     public static ElencoContatti carica(String filename) throws FileNotFoundException, Exception{
                 String[] numero = new String[3];
         String[] email = new String[3];

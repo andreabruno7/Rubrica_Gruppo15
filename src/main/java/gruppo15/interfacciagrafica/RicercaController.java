@@ -10,8 +10,6 @@ import gruppo15.rubrica.Contatto;
 import gruppo15.rubrica.ElencoContatti;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -27,7 +25,7 @@ public class RicercaController extends TabellaController{
      * La tabella avrà come colonne solo i campi nome e cognome degli oggetti Contatto che conterrà.
      * 
      * @pre Il controller deve essere associato al file fxml opportuno.
-     * @post La tabella viene creata vuota.
+     * @post La tabella contiene inizialmente tutti i contatti dell'elenco passato.
      * 
      * @param[in] lista L'elenco in cui deve fare la ricerca.
      */
@@ -46,6 +44,7 @@ public class RicercaController extends TabellaController{
         stage.close();
     }
     
+    // modifica la tabella nel caso in cui uno dei contatti trovati è stato eliminato
     @Override
     protected void gestisciEliminazioneContatto(Contatto contatto){
         elenco.removeContatto(contatto);

@@ -152,17 +152,6 @@ public class ElencoContatti {
         aggiornaElenco();
     }
     
-    /**
-     * @brief Ritorna il numero di elementi presenti nell'elenco.
-     * 
-     * Il metodo ritorna il numero degli elementi presenti nell'elenco.
-     * 
-     * @return Ritorna un intero che rappresenta la dimensione dell'elenco.
-     */
-    public int numContatti(){
-        return elenco.size();
-    }
-    
     private void aggiornaElenco(){
         elenco.sort(new Comparatore());
         elencoOrdinato.setAll(elenco);

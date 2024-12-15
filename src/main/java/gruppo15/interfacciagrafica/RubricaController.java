@@ -15,7 +15,6 @@ import javafx.beans.binding.Bindings;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import gruppo15.rubrica.Rubrica;
 import java.io.File;
 import java.io.IOException;
 import javafx.stage.FileChooser;
@@ -89,6 +88,7 @@ public class RubricaController extends TabellaController {
         aggiornaTabella();
     }
     
+    // apre la finestra per scegliere il file
     private File scegliFile(){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Scegli il file");

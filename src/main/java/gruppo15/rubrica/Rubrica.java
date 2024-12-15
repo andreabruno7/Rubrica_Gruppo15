@@ -10,26 +10,22 @@ package gruppo15.rubrica;
 import gruppo15.interfacciagrafica.RubricaController;
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 
 public class Rubrica extends Application {
     private ElencoContatti contatti;
     
-/**
- * @brief  Caricamento della rubrica.
- * 
- * Carica il file FXML e crea la finestra per la gestione della rubrica.
- * 
- * @param[in] primaryStage Oggetto principale che viene creato e mostrato all'avvio dell'applicazione.
- */    
+    /**
+     * @brief  Caricamento della rubrica.
+     * 
+     * Carica il file FXML e crea la finestra per la gestione della rubrica.
+     * 
+     * @param[in] primaryStage Oggetto principale che viene creato e mostrato all'avvio dell'applicazione.
+     */    
     @Override
     public void start(Stage primaryStage) throws IOException {
         contatti = new ElencoContatti();
@@ -49,12 +45,12 @@ public class Rubrica extends Application {
         
     }
 
-/**
- * @brief Avvia l'applicazione JavaFX.
- * 
- * 
- * @param[in] args Argomenti da linea di comando.
- */ 
+    /**
+     * @brief Avvia l'applicazione JavaFX.
+     * 
+     * 
+     * @param[in] args Argomenti da linea di comando.
+     */ 
     public static void main(String[] args) {
         launch(args);
     }

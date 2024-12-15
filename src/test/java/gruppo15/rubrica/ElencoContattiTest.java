@@ -118,16 +118,5 @@ public class ElencoContattiTest {
         assertEquals(contatto3,result.get(2));
     }
     
-    /**
-     * Test of numContatti method, of class ElencoContatti.
-     */
-    @org.junit.jupiter.api.Test
-    public void testNumContatti() {
-        ElencoContatti lista = new ElencoContatti();
-        assertEquals(0, lista.numContatti());
-        Contatto contatto1 = new Contatto();
-        lista.addContatto(contatto1);
-        assertEquals(1, lista.numContatti());
-    }
     
 }

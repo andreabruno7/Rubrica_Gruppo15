@@ -45,7 +45,7 @@ public class TabellaController {
      * 
      * @post L'elenco non conterrà contatti se non sono stati aggiunti alla tabella.
      * 
-     * @return  Viene restituito l'elenco dei contatti presenti all'interno della tabella
+     * @return  Viene restituito l'elenco dei contatti presenti all'interno della tabella.
      */
     public ElencoContatti getElenco() {
         return this.elenco;
@@ -95,7 +95,7 @@ public class TabellaController {
         tabella.refresh();
     }
         
-        protected void gestisciEliminazioneContatto(Contatto contatto){
+    protected void gestisciEliminazioneContatto(Contatto contatto){
         elenco.removeContatto(contatto);
     }
 }
