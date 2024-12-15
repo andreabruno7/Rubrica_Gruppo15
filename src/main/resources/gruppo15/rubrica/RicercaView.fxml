@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="462.0">
+         <children>
+            <TableView fx:id="tabella" layoutX="20.0" layoutY="66.0" onMouseClicked="#handleContattoSelezionato" prefHeight="571.0" prefWidth="422.0">
+              <columns>
+                <TableColumn fx:id="nomeCln" prefWidth="209.0" text="Nome" />
+                <TableColumn fx:id="cognomeCln" prefWidth="212.0" text="Cognome" />
+              </columns>
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect>
+            </TableView>
+            <TextField fx:id="ricerca" layoutX="68.0" layoutY="23.0" prefHeight="31.0" prefWidth="236.0" promptText=" cerca">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></TextField>
+            <Button fx:id="ricercaid1" layoutX="328.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleRicerca" prefHeight="31.0" prefWidth="112.0" text="Ricerca">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+            <Button fx:id="esciid1" layoutX="328.0" layoutY="653.0" mnemonicParsing="false" onAction="#handleEsci" prefHeight="31.0" prefWidth="112.0" text="Esci">
+               <effect>
+                  <DropShadow color="#00000026" offsetY="5.0" />
+               </effect></Button>
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="27.0" layoutY="23.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
