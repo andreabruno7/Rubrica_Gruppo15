@@ -10,15 +10,25 @@ package gruppo15.interfacciagrafica;
 import gruppo15.rubrica.Contatto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.stage.Stage;
 
 
 public class AggiungiController extends ModificaController{
     private boolean aggiunto = false;
     
+    public void inizializzaAggiungi(){
+        initBindings();
+    }
+    
+    
     @FXML
     @Override
     protected void handleConferma(ActionEvent event) {
-        
+        contatto = new Contatto();
+        if(aggiornaContatto()){
+            aggiunto = true;
+            chiudiFinestra();
+        }
     }
 
     /**
@@ -30,7 +40,7 @@ public class AggiungiController extends ModificaController{
      * @return Viene restituito true se il contatto mantenuto dal controller è stato aggiunto , altrimenti ritorna false.
      */
     public boolean isAggiunto() {
-        
+        return aggiunto;
     }
 
     /**
@@ -45,7 +55,7 @@ public class AggiungiController extends ModificaController{
      */ 
     @Override
     public Contatto getContatto(){
-        
+        return contatto;
     }
     
 }
