@@ -34,7 +34,7 @@ public class Rubrica extends Application {
     public void start(Stage primaryStage) throws IOException {
         contatti = new ElencoContatti();
             Parent root;
-            FXMLLoader loader = new FXMLLoader(Rubrica.class.getResource("RubricaView.fxml"));
+            FXMLLoader loader = new FXMLLoader(RubricaController.class.getResource("RubricaView.fxml"));
             RubricaController controller = new RubricaController();
             loader.setController(controller);
             root = loader.load();

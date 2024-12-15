@@ -50,7 +50,7 @@ public class VisualizzaController {
     
     @FXML
     private void handleModifica(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ModificaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(VisualizzaController.class.getResource("ModificaView.fxml"));
         ModificaController controller = new ModificaController();
         loader.setController(controller);
         Parent root = loader.load();
